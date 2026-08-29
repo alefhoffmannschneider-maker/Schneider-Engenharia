@@ -94,8 +94,8 @@ nav a:hover { color: #fff; }
 
 /* Hero */
 .hero {
-  background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
-              url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80') center/cover;
+  background: linear-gradient(rgba(15,23,42,0.78), rgba(15,23,42,0.78)),
+              url('https://media.rff.org/images/Power_Plant_Construction.2e16d0ba.fill-1270x1120.png') center/cover;
   color: #fff;
   text-align: center;
   padding: 130px 0 110px;
