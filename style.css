@@ -187,6 +187,14 @@ h2 {
   color: #64748b;
 }
 
+.risco-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
 /* Serviços */
 .servicos {
   padding: 90px 0;
