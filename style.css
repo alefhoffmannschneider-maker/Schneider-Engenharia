@@ -459,18 +459,58 @@ h2 {
   }
 }
 
-/* Sobre */
+/* Seção Sobre Ajustada */
 .sobre {
-  padding: 90px 0;
-  text-align: center;
-  background: #f8fafc;
+  padding: 0 0 80px 0;
+  background-color: #f4f6f8;
 }
 
-.sobre p {
-  max-width: 700px;
-  margin: 0 auto 14px;
-  font-size: 1.1rem;
-  color: #475569;
+.sobre-header-bar {
+  background-color: #0b2545; /* Azul escuro igual ao original */
+  color: #ffffff;
+  padding: 35px 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sobre-header-bar h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.sobre-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.sobre-textos {
+  flex: 1;
+  text-align: left;
+}
+
+.sobre-textos p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #1d2d44;
+  margin-bottom: 20px;
+}
+
+.sobre-imagem {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+  .sobre-content-wrapper {
+    flex-direction: column;
+  }
+  .sobre-imagem {
+    max-width: 100%;
+  }
 }
 
 /* Números */
