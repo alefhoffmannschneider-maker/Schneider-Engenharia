@@ -153,13 +153,7 @@ h2 {
 /* Riscos */
 .riscos {
   padding: 90px 0;
-  background: #f8fafc;
-}
-
-/* Riscos */
-.riscos {
-  padding: 90px 0;
-  background: #0f172a; /* Fundo escuro como na referência */
+  background: #0f172a;
   color: #fff;
 }
 
@@ -167,77 +161,96 @@ h2 {
 
 .riscos-grid {
   display: grid;
-  /* Mudado para 6 colunas conforme imagem */
-  grid-template-columns: repeat(6, 1fr); 
-  gap: 20px;
-  margin-bottom: 60px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-bottom: 50px;
 }
 
 .risco-card {
-  /* Removidas as bordas brancas/cinzas */
-  background: transparent; 
+  background: transparent;
   border: none;
-  padding: 0; /* Removido padding interno */
+  padding: 0;
   text-align: center;
-  transition: transform 0.25s ease;
+  position: relative;
+  margin-top: 20px; /* Espaço para o rótulo flutuante não cortar em cima */
 }
 
-.risco-card:hover {
-  transform: translateY(-4px);
+/* Rótulo flutuante estilo Google Sites */
+.risco-tag {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #090d16;
+  border: 1.5px solid #38bdf8;
+  color: #38bdf8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  white-space: nowrap;
 }
 
-/* Estilo da imagem arredondada com borda */
-.risco-card-image {
+/* Container da imagem com proporção correta e borda azul */
+.risco-img-box {
   width: 100%;
-  height: 160px;
+  aspect-ratio: 1 / 1; /* Mantém perfeitamente quadrado em qualquer tela */
+  border-radius: 16px;
+  border: 3px solid #38bdf8;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: #1e293b;
+}
+
+.risco-img-box img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 16px; /* Borda mais arredondada */
-  border: 4px solid #38bdf8; /* Borda azul ciano */
-  margin-bottom: 16px;
-  display: block;
 }
 
 .risco-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #fff; /* Título branco */
-  line-height: 1.3;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #fff;
+  line-height: 1.25;
 }
 
 .risco-card p {
-  font-size: 0.9rem;
-  color: #94a3b8; /* Texto cinza claro */
-  margin-bottom: 10px;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  line-height: 1.4;
 }
 
-/* Estilo da seta azul */
 .risco-arrow {
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2338bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>') no-repeat center center;
-  vertical-align: middle;
-  margin-left: 4px;
+  color: #38bdf8;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
 }
 
-/* Ajuste para o texto final da seção */
-.riscos .center .destaque {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
+.risco-card:hover .risco-arrow {
+  transform: translateX(4px);
 }
 
-.riscos .center .section-sub {
-    margin-bottom: 40px;
-    max-width: 800px;
+/* Responsivo para Celulares e Tablets */
+@media (max-width: 1024px) {
+  .riscos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .riscos-grid {
+    grid-template-columns: 1fr; /* 1 coluna empilhada no celular */
+    max-width: 340px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Responsive - Ajuste para telas menores */
-@media (max-width: 1100px) {
-  .riscos-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas em tablets */
   }
 }
 
