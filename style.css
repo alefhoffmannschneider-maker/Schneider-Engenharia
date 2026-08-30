@@ -156,48 +156,89 @@ h2 {
   background: #f8fafc;
 }
 
+/* Riscos */
+.riscos {
+  padding: 90px 0;
+  background: #0f172a; /* Fundo escuro como na referência */
+  color: #fff;
+}
+
+.riscos h2, .riscos .section-sub { color: #fff; }
+
 .riscos-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* Mudado para 6 colunas conforme imagem */
+  grid-template-columns: repeat(6, 1fr); 
   gap: 20px;
+  margin-bottom: 60px;
 }
 
 .risco-card {
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 28px;
-  transition: all 0.25s ease;
+  /* Removidas as bordas brancas/cinzas */
+  background: transparent; 
+  border: none;
+  padding: 0; /* Removido padding interno */
+  text-align: center;
+  transition: transform 0.25s ease;
 }
 
 .risco-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  border-color: #cbd5e1;
+}
+
+/* Estilo da imagem arredondada com borda */
+.risco-card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 16px; /* Borda mais arredondada */
+  border: 4px solid #38bdf8; /* Borda azul ciano */
+  margin-bottom: 16px;
+  display: block;
 }
 
 .risco-card h3 {
   font-size: 1.1rem;
   margin-bottom: 10px;
-  color: #0f172a;
+  color: #fff; /* Título branco */
+  line-height: 1.3;
 }
 
 .risco-card p {
-  font-size: 0.95rem;
-  color: #64748b;
+  font-size: 0.9rem;
+  color: #94a3b8; /* Texto cinza claro */
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
-.risco-img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 14px;
+/* Estilo da seta azul */
+.risco-arrow {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2338bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>') no-repeat center center;
+  vertical-align: middle;
+  margin-left: 4px;
 }
 
-/* Serviços */
-.servicos {
-  padding: 90px 0;
+/* Ajuste para o texto final da seção */
+.riscos .center .destaque {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.riscos .center .section-sub {
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive - Ajuste para telas menores */
+@media (max-width: 1100px) {
+  .riscos-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em tablets */
+  }
 }
 
 .servicos-grid {
