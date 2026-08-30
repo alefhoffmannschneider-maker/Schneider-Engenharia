@@ -1128,3 +1128,44 @@ img {
     max-width: 100%;
   }
 }
+
+/* Ajustes específicos para dispositivos móveis (telas menores que 768px) */
+@media (max-width: 768px) {
+  /* Transforma cada bloco de serviço em um card unificado */
+  .bloco-servico, 
+  .bloco-servico.invertido {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #0f172a !important; /* Fundo levemente destacado para o card */
+    border: 1px solid #1e293b !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    margin-bottom: 30px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  /* Imagem sempre no topo do card */
+  .bloco-servico .bloco-imagem {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+  .bloco-servico .bloco-imagem img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Conteúdo logo abaixo da imagem, dentro do mesmo card */
+  .bloco-servico .bloco-conteudo {
+    width: 100% !important;
+    padding: 25px 20px !important;
+    background: transparent !important;
+  }
+
+  /* Ajuste de tamanho de fonte para títulos no mobile não quebrarem feio */
+  .bloco-servico .bloco-conteudo h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+  }
+}
