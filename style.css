@@ -419,110 +419,88 @@ h2 {
   font-weight: 700;
 }
 
-/* Desafios (Atualizado com imagens, tags e cards refinados) */
-.desafios {
-  padding: 90px 0;
-  background: #0f172a;
-  color: #fff;
-}
+<section class="desafios" id="projetos">
+  <div class="container">
+    <h2>DESAFIOS RESOLVIDOS</h2>
+    <p class="section-sub">Projetos desenvolvidos conforme normas técnicas, garantindo segurança, eficiência e viabilidade de execução.</p>
+    
+    <div class="desafios-grid">
+      <!-- Card 1 -->
+      <div class="desafio-card">
+        <span class="desafio-tag">Galpão</span>
+        <div class="desafio-img-box">
+          <img src="galpao.jpg" alt="Galpão Metálico Industrial">
+        </div>
+        <h3>Galpão Metálico Industrial</h3>
+        <p>Grande vão gerando incerteza estrutural mesmo para executores experientes.</p>
+        <a href="#" class="desafio-link">Explorar Solução →</a>
+      </div>
 
-.desafios h2 { 
-  color: #fff; 
-}
+      <!-- Card 2 -->
+      <div class="desafio-card">
+        <span class="desafio-tag">Segurança</span>
+        <div class="desafio-img-box">
+          <img src="varal.jpg" alt="Varal de Segurança">
+        </div>
+        <h3>Varal de Segurança</h3>
+        <p>Risco de acidente e embargo por ausência de sistema de linha de vida conforme NR-18.</p>
+        <a href="#" class="desafio-link">Explorar Solução →</a>
+      </div>
 
-.desafios .section-sub { 
-  color: #94a3b8; 
-  text-align: center;
-  margin-bottom: 50px;
-}
+      <!-- Card 3 -->
+      <div class="desafio-card">
+        <span class="desafio-tag">Plataforma</span>
+        <div class="desafio-img-box">
+          <img src="plataforma.jpg" alt="Plataforma Industrial">
+        </div>
+        <h3>Plataforma Industrial</h3>
+        <p>Acesso industrial ineficiente: Gargalo operacional e risco à segurança.</p>
+        <a href="#" class="desafio-link">Explorar Solução →</a>
+      </div>
 
-.desafios-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 40px;
-}
+      <!-- Card 4 -->
+      <div class="desafio-card">
+        <span class="desafio-tag">Emergência</span>
+        <div class="desafio-img-box">
+          <img src="escada.jpg" alt="Escada Metálica de Emergência">
+        </div>
+        <h3>Escada Metálica de Emergência</h3>
+        <p>Edificação sem rota de fuga adequada, com risco de interdição pelos Bombeiros.</p>
+        <a href="#" class="desafio-link">Explorar Solução →</a>
+      </div>
 
-.desafio-card {
-  background: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 16px;
-  padding: 24px;
-  text-align: left;
-  position: relative;
-  margin-top: 15px;
-  transition: all 0.25s ease;
-}
+      <!-- Card 5 -->
+      <div class="desafio-card">
+        <span class="desafio-tag">Adequação</span>
+        <div class="desafio-img-box">
+          <img src="nr12.jpg" alt="Adequação Máquina NR-12">
+        </div>
+        <h3>Adequação Máquina NR-12</h3>
+        <p>Equipamento fora da NR-12, com risco de acidente, multa e embargo da operação.</p>
+        <a href="#" class="desafio-link">Explorar Solução →</a>
+      </div>
 
-.desafio-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
-  border-color: #38bdf8;
-}
+      <!-- Card 6 -->
+      <div class="desafio-card">
+        <span class="desafio-tag">Residência</span>
+        <div class="desafio-img-box">
+          <img src="residencia.jpg" alt="Residência Metálica">
+        </div>
+        <h3>Residência Metálica</h3>
+        <p>Estrutura com exigência de solução leve, resistente e integrada ao espaço existente.</p>
+        <a href="#" class="desafio-link">Explorar Solução →</a>
+      </div>
+    </div>
 
-.desafio-tag {
-  position: absolute;
-  top: -12px;
-  left: 24px;
-  background: #090d16;
-  border: 1.5px solid #38bdf8;
-  color: #38bdf8;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 2px 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  z-index: 2;
-}
-
-.desafio-img-box {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border-radius: 12px;
-  border: 2px solid #38bdf8;
-  overflow: hidden;
-  margin-bottom: 16px;
-  background: #0b192c;
-}
-
-.desafio-img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.desafio-card:hover .desafio-img-box img {
-  transform: scale(1.03);
-}
-
-.desafio-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  color: #fff;
-}
-
-.desafio-card p {
-  font-size: 0.9rem;
-  color: #94a3b8;
-  line-height: 1.5;
-  margin-bottom: 16px;
-}
-
-.desafio-link {
-  display: inline-block;
-  color: #38bdf8;
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: transform 0.2s;
-}
-
-.desafio-card:hover .desafio-link {
-  transform: translateX(4px);
-}
+    <!-- Fechamento da Seção -->
+    <div style="text-align: center; margin-top: 50px;">
+      <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;">
+        Situação parecida com a sua? <strong style="color: #fff;">Entre em contato para uma avaliação técnica.</strong>
+      </p>
+      <a href="https://wa.me/5551989950000?text=Olá,%20gostaria%20de%20solicitar%20uma%20análise%20técnica" class="btn btn-primary" target="_blank">Solicitar Análise Técnica</a>
+    </div>
+  </div>
+</section>
 
 /* Sobre */
 .sobre {
