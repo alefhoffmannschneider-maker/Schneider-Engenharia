@@ -4,46 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Processo e Metodologia | Schneider Engenharia Pesada</title>
-  <!-- CSS Principal -->
+  <!-- Caminho corrigido para voltar à raiz e achar o style.css -->
   <link rel="stylesheet" href="../style.css">
-  <!-- FontAwesome para ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Cabeçalho / Menu -->
-  <header class="header">
-    <div class="container header-container">
-      <a href="../index.html" class="logo">
-        <img src="../logo_nobg.png" alt="Schneider Engenharia Pesada">
+<!-- Cabeçalho da Subpágina -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <!-- Caminho corrigido para a logo e para a home (index.html) -->
+      <a href="../index.html" style="display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none;">
+        <img src="../logo_nobg.png" alt="Logo Schneider Engenharia" style="height: 36px; width: auto; object-fit: contain;">
+        SCHNEIDER ENGENHARIA
       </a>
-      <nav class="nav">
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="../index.html#projetos">Projetos</a></li>
-          <li><a href="processo.html" class="active">Processo</a></li>
-          <li><a href="../index.html#pacotes">Pacotes</a></li>
-        </ul>
-      </nav>
-      <a href="https://wa.me/5551989950000" target="_blank" class="btn-orcamento">Solicitar Orçamento</a>
     </div>
-  </header>
+    
+    <nav>
+      <!-- Links de navegação voltando para a raiz do site -->
+      <a href="../servicos/servicos.html">Serviços</a>
+      <a href="../index.html#riscos">Riscos</a>
+      <a href="processos.html" style="color: #60a5fa;">Processo</a>
+      <a href="../index.html#pacotes">Pacotes</a>
+      <a href="tel:5551989950000">(51) 98995-0000</a>
+    </nav>
+    
+    <a href="https://wa.me/5551989950000?text=Olá,%20gostaria%20de%20solicitar%20uma%20análise%20técnica" class="btn btn-primary" target="_blank">Solicitar Orçamento</a>
+  </div>
+</header>
 
   <!-- Banner da Página -->
-  <section class="page-header">
+  <section class="page-header" style="padding: 60px 0; text-align: center; background: #0f172a; color: #fff;">
     <div class="container">
       <h1>Processo</h1>
-      <p>Processo técnico estruturado para execução industrial</p>
-      <a href="https://wa.me/5551989950000" target="_blank" class="btn-primary" style="margin-top: 20px; display: inline-block;">Quero desenvolver meu projeto agora</a>
+      <p style="color: #94a3b8; margin-top: 10px;">Processo técnico estruturado para execução industrial</p>
+      <a href="https://wa.me/5551989950000" target="_blank" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Quero desenvolver meu projeto agora</a>
     </div>
   </section>
 
   <!-- Seção de Passos (Padrão Home / Seis Passos) -->
-  <section class="processo" id="processo">
+  <section class="processo" id="processo" style="padding: 60px 0;">
     <div class="container">
-      <h2>Como a engenharia é aplicada na prática</h2>
-      <p class="section-sub">Sem improviso • Previsibilidade • Responsabilidade<br>Do primeiro contato até a entrega final, um processo claro e eficiente.</p>
+      <h2 style="text-align: center; margin-bottom: 10px;">Como a engenharia é aplicada na prática</h2>
+      <p class="section-sub" style="text-align: center; margin-bottom: 40px;">Sem improviso • Previsibilidade • Responsabilidade<br>Do primeiro contato até a entrega final, um processo claro e eficiente.</p>
 
       <div class="processo-grid">
         <div class="passo">
@@ -103,18 +108,6 @@
     </div>
   </section>
 
-  <!-- Seção Acompanhamento Opcional -->
-  <section class="bloco-servico container" style="margin: 40px auto; padding: 20px 0;">
-    <div class="bloco-imagem" style="flex: 1;">
-      <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f8f3c?auto=format&fit=crop&w=1280&q=80" alt="Acompanhamento de Execução" style="width: 100%; border-radius: 8px;">
-    </div>
-    <div class="bloco-conteudo" style="flex: 1; padding: 20px;">
-      <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: #0f172a;">Acompanhamento de execução (Opcional)</h3>
-      <p style="margin-bottom: 15px;">Suporte técnico durante a execução, garantindo que o projeto seja aplicado corretamente em campo.</p>
-      <p>Implementação por equipe parceira especializada, com acompanhamento técnico para assegurar fidelidade ao projeto.</p>
-    </div>
-  </section>
-
   <!-- Rodapé -->
   <footer class="footer">
     <div class="container footer-grid">
@@ -134,9 +127,8 @@
         <h4>Serviços e Institucional</h4>
         <ul>
           <li><a href="../index.html#quem-somos">Quem Somos</a></li>
-          <li><a href="../index.html#projetos">Projetos</a></li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="processo.html">Processo</a></li>
+          <li><a href="../servicos/servicos.html">Serviços</a></li>
+          <li><a href="processos.html">Processo</a></li>
           <li><a href="../index.html#pacotes">Pacotes</a></li>
         </ul>
       </div>
