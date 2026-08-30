@@ -1,4 +1,8 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -13,7 +17,9 @@ body {
   padding: 0 24px;
 }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none; 
+}
 
 /* Header */
 .header {
@@ -168,7 +174,9 @@ h2 {
   color: #fff;
 }
 
-.riscos h2, .riscos .section-sub { color: #fff; }
+.riscos h2, .riscos .section-sub { 
+  color: #fff; 
+}
 
 .riscos-grid {
   display: grid;
@@ -350,10 +358,10 @@ h2 {
   font-weight: bold;
 }
 
-/* Desafios Resolvidos - Estilo idêntico ao Google Sites */
+/* Desafios Resolvidos */
 .desafios {
   padding: 80px 0;
-  background: #0b1120; /* Fundo escuro padrão */
+  background: #0b1120;
   color: #fff;
 }
 
@@ -396,7 +404,6 @@ h2 {
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.4);
 }
 
-/* Caixa da imagem limpa e proporcional igual ao print original */
 .desafio-img-box {
   width: 100%;
   height: 200px;
@@ -451,22 +458,14 @@ h2 {
   transform: translateX(4px);
 }
 
-/* Responsivo para celulares */
-@media (max-width: 900px) {
-  .desafios-grid {
-    grid-template-columns: 1fr;
-    padding: 0 16px;
-  }
-}
-
-/* Seção Sobre Ajustada */
+/* Seção Sobre */
 .sobre {
   padding: 0 0 80px 0;
   background-color: #f4f6f8;
 }
 
 .sobre-header-bar {
-  background-color: #0b2545; /* Azul escuro igual ao original */
+  background-color: #0b2545;
   color: #ffffff;
   padding: 35px 0;
   text-align: center;
@@ -503,16 +502,6 @@ h2 {
   max-width: 500px;
 }
 
-/* Responsividade para celulares */
-@media (max-width: 768px) {
-  .sobre-content-wrapper {
-    flex-direction: column;
-  }
-  .sobre-imagem {
-    max-width: 100%;
-  }
-}
-
 /* Números */
 .numeros {
   background: #1e293b;
@@ -521,13 +510,22 @@ h2 {
   text-align: center;
 }
 
-.numeros h2 { color: #fff; margin-bottom: 40px; }
+.numeros h2 { 
+  color: #fff; 
+  margin-bottom: 40px; 
+}
 
 .numeros-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .numeros-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .numeros strong {
@@ -731,7 +729,7 @@ h2 {
   font-size: 0.85rem;
 }
 
-/* Responsive */
+/* Responsive Media Queries */
 @media (max-width: 1024px) {
   .riscos-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -752,17 +750,23 @@ h2 {
 }
 
 @media (max-width: 900px) {
-  nav { display: none; }
-  .hero h1 { font-size: 2.1rem; }
+  nav { 
+    display: none; 
+  }
+  
+  .hero h1 { 
+    font-size: 2.1rem; 
+  }
+  
   .desafios-grid,
   .processo-grid,
   .porque-grid,
-  .numeros-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
 
-  .bloco-servico, .bloco-servico.invertido {
+  .bloco-servico, 
+  .bloco-servico.invertido {
     flex-direction: column;
   }
   
@@ -777,5 +781,13 @@ h2 {
   
   .header-secao h2 {
     font-size: 2rem;
+  }
+
+  .sobre-content-wrapper {
+    flex-direction: column;
+  }
+  
+  .sobre-imagem {
+    max-width: 100%;
   }
 }
