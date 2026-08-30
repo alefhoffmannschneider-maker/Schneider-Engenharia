@@ -85,7 +85,8 @@ nav a[href^="tel"] {
 
 .btn-primary:hover {
   background: #1d4ed8;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
 }
 
 .btn-white {
@@ -95,7 +96,8 @@ nav a[href^="tel"] {
 
 .btn-white:hover {
   background: #f1f5f9;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
 }
 
 .btn-outline {
@@ -107,6 +109,7 @@ nav a[href^="tel"] {
 .btn-outline:hover {
   background: #2563eb;
   color: #fff;
+  transform: translateY(-2px);
 }
 
 /* Hero */
@@ -167,6 +170,11 @@ h2 {
   color: #0f172a;
 }
 
+/* Cantos arredondados padrão em todas as imagens do site */
+img {
+  border-radius: 8px;
+}
+
 /* Riscos */
 .riscos {
   padding: 90px 0;
@@ -192,6 +200,11 @@ h2 {
   text-align: center;
   position: relative;
   margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.risco-card:hover {
+  transform: translateY(-5px);
 }
 
 .risco-tag {
@@ -226,6 +239,11 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.risco-card:hover .risco-img-box img {
+  transform: scale(1.05);
 }
 
 .risco-card h3 {
@@ -295,6 +313,12 @@ h2 {
   overflow: hidden;
   border: 1px solid #334155;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloco-servico:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.4);
 }
 
 .bloco-servico.invertido {
@@ -312,9 +336,10 @@ h2 {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  border-radius: 0;
 }
 
-.bloco-imagem img:hover {
+.bloco-servico:hover .bloco-imagem img {
   transform: scale(1.03);
 }
 
@@ -419,6 +444,7 @@ h2 {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  border-radius: 0;
 }
 
 .desafio-card:hover .desafio-img-box img {
@@ -502,6 +528,16 @@ h2 {
   max-width: 500px;
 }
 
+.sobre-imagem img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.sobre-imagem:hover img {
+  transform: scale(1.02);
+}
+
 /* Números */
 .numeros {
   background: #1e293b;
@@ -528,6 +564,27 @@ h2 {
   }
 }
 
+.numero-item {
+  background: #0f172a;
+  padding: 24px 16px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.numero-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.numero-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
 .numeros strong {
   display: block;
   font-size: 2.1rem;
@@ -539,56 +596,104 @@ h2 {
 .numeros span {
   font-size: 0.9rem;
   opacity: 0.85;
+  color: #94a3b8;
 }
 
-.numeros-text {
+.numeros-footer-text {
   opacity: 0.85;
   font-size: 1.05rem;
+  color: #cbd5e1;
 }
 
-/* Processo */
+/* Processo (Layout original restaurado com design moderno e escuro) */
 .processo {
+  background-color: #0f172a;
+  color: #ffffff;
   padding: 90px 0;
+}
+
+.processo h2, .processo .section-sub {
+  color: #ffffff;
 }
 
 .processo-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .processo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .processo-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .passo {
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background: #1e293b;
+  border: 1px solid #334155;
   border-radius: 10px;
-  padding: 26px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   transition: all 0.25s ease;
 }
 
 .passo:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.07);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+  border-color: #38bdf8;
+}
+
+.passo-img-box {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #0f172a;
+}
+
+.passo-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 0;
+}
+
+.passo:hover .passo-img-box img {
+  transform: scale(1.05);
 }
 
 .passo span {
   display: inline-block;
-  background: #eff6ff;
-  color: #2563eb;
-  font-weight: 700;
-  font-size: 0.85rem;
-  padding: 4px 10px;
-  border-radius: 4px;
-  margin-bottom: 12px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin-bottom: 10px;
+  background: transparent;
+  padding: 0;
 }
 
 .passo h4 {
-  margin-bottom: 8px;
-  color: #0f172a;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .passo p {
-  font-size: 0.95rem;
-  color: #64748b;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.4;
 }
 
 /* Pacotes */
@@ -651,6 +756,7 @@ h2 {
 .porque-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border-color: #2563eb;
 }
 
 .porque-item h4 {
@@ -720,6 +826,11 @@ h2 {
 
 .footer a {
   color: #60a5fa;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #93c5fd;
 }
 
 .footer-bottom {
@@ -759,7 +870,6 @@ h2 {
   }
   
   .desafios-grid,
-  .processo-grid,
   .porque-grid,
   .footer-grid {
     grid-template-columns: 1fr;
