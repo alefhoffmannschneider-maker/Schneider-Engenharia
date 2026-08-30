@@ -172,13 +172,13 @@ h2 {
   padding: 0;
   text-align: center;
   position: relative;
-  margin-top: 20px; /* Espaço para o rótulo flutuante não cortar em cima */
+  margin-top: 20px;
 }
 
 /* Rótulo flutuante estilo Google Sites */
 .risco-tag {
   position: absolute;
-  top: -14px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
   background: #090d16;
@@ -186,7 +186,7 @@ h2 {
   color: #38bdf8;
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 3px 12px;
+  padding: 2px 10px;
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -197,7 +197,7 @@ h2 {
 /* Container da imagem com proporção correta e borda azul */
 .risco-img-box {
   width: 100%;
-  aspect-ratio: 1 / 1; /* Mantém perfeitamente quadrado em qualquer tela */
+  aspect-ratio: 1 / 1;
   border-radius: 16px;
   border: 3px solid #38bdf8;
   overflow: hidden;
@@ -235,23 +235,6 @@ h2 {
 
 .risco-card:hover .risco-arrow {
   transform: translateX(4px);
-}
-
-/* Responsivo para Celulares e Tablets */
-@media (max-width: 1024px) {
-  .riscos-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
-    gap: 24px;
-  }
-}
-
-@media (max-width: 600px) {
-  .riscos-grid {
-    grid-template-columns: 1fr; /* 1 coluna empilhada no celular */
-    max-width: 340px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 .servicos-grid {
@@ -577,10 +560,28 @@ h2 {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .riscos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets e celulares */
+    gap: 16px;
+  }
+  
+  .risco-card {
+    margin-top: 25px;
+  }
+
+  .risco-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .risco-card p {
+    font-size: 0.75rem;
+  }
+}
+
 @media (max-width: 900px) {
   nav { display: none; }
   .hero h1 { font-size: 2.1rem; }
-  .riscos-grid,
   .desafios-grid,
   .processo-grid,
   .porque-grid,
