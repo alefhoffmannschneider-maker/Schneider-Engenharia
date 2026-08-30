@@ -826,7 +826,7 @@ img {
 .porque-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -848,7 +848,7 @@ img {
 .porque-img-box {
   width: 100%;
   aspect-ratio: 1 / 1;
-  max-width: 130px;
+  max-width: 110px;
   margin: 0 auto 16px auto;
   border-radius: 16px;
   background: #1e293b;
@@ -857,12 +857,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 12px; /* Garante que os ícones fiquem com uma margem interna elegante */
 }
 
 .porque-img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Alterado para 'contain' para não cortar as bordas dos ícones do Google */
   transition: transform 0.3s ease;
   border-radius: 0;
 }
