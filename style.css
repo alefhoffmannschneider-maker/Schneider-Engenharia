@@ -1169,3 +1169,8 @@ img {
     line-height: 1.3 !important;
   }
 }
+
+.pacote-card h3, 
+.pacote-card p {
+  color: #f8fafc; /* Garante que o texto fique claro e legível */
+}
